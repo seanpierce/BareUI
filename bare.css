@@ -1,0 +1,328 @@
+/**
+ * Bare UI
+ *
+ * Global design tokens used by Bare components.
+ *
+ * Components should consume these values using CSS custom properties
+ * rather than defining application-specific colors, spacing, typography,
+ * or interaction styles directly.
+ */
+
+:root {
+	/* ================================================================
+	 * COLOR
+	 * ================================================================ */
+
+	/* Primary */
+	--bare-color-primary: #6750a4;
+	--bare-color-on-primary: #ffffff;
+	--bare-color-primary-container: #eaddff;
+	--bare-color-on-primary-container: #21005d;
+
+	/* Secondary */
+	--bare-color-secondary: #625b71;
+	--bare-color-on-secondary: #ffffff;
+	--bare-color-secondary-container: #e8def8;
+	--bare-color-on-secondary-container: #1d192b;
+
+	/* Tertiary */
+	--bare-color-tertiary: #7d5260;
+	--bare-color-on-tertiary: #ffffff;
+	--bare-color-tertiary-container: #ffd8e4;
+	--bare-color-on-tertiary-container: #31111d;
+
+	/* Error */
+	--bare-color-error: #b3261e;
+	--bare-color-on-error: #ffffff;
+	--bare-color-error-container: #f9dedc;
+	--bare-color-on-error-container: #410e0b;
+
+	/* Surface */
+	--bare-color-surface: #fffbfe;
+	--bare-color-surface-container: #f3edf7;
+	--bare-color-surface-container-high: #ece6f0;
+	--bare-color-on-surface: #1d1b20;
+	--bare-color-on-surface-variant: #49454f;
+
+	/* Outline */
+	--bare-color-outline: #79747e;
+	--bare-color-outline-variant: #cac4d0;
+
+	/* Misc */
+	--bare-color-background: var(--bare-color-surface);
+	--bare-color-disabled: rgba(29, 27, 32, 0.38);
+	--bare-color-disabled-surface: rgba(29, 27, 32, 0.12);
+	--bare-color-focus: var(--bare-color-primary);
+
+
+	/* ================================================================
+	 * TYPOGRAPHY
+	 * ================================================================ */
+
+	--bare-font-family:
+		Roboto,
+		"Helvetica Neue",
+		Arial,
+		sans-serif;
+
+	--bare-font-size-xs: 0.6875rem;
+	--bare-font-size-sm: 0.75rem;
+	--bare-font-size-md: 0.875rem;
+	--bare-font-size-lg: 1rem;
+	--bare-font-size-xl: 1.375rem;
+	--bare-font-size-2xl: 1.75rem;
+	--bare-font-size-3xl: 2rem;
+
+	--bare-font-weight-regular: 400;
+	--bare-font-weight-medium: 500;
+	--bare-font-weight-bold: 700;
+
+	--bare-line-height-sm: 1.25;
+	--bare-line-height-md: 1.5;
+	--bare-line-height-lg: 1.75;
+
+	--bare-letter-spacing-tight: -0.01em;
+	--bare-letter-spacing-normal: 0;
+	--bare-letter-spacing-wide: 0.01em;
+
+
+	/* ================================================================
+	 * SPACING
+	 * ================================================================ */
+
+	--bare-space-0: 0;
+	--bare-space-1: 0.25rem;
+	--bare-space-2: 0.5rem;
+	--bare-space-3: 0.75rem;
+	--bare-space-4: 1rem;
+	--bare-space-5: 1.25rem;
+	--bare-space-6: 1.5rem;
+	--bare-space-8: 2rem;
+	--bare-space-10: 2.5rem;
+	--bare-space-12: 3rem;
+
+
+	/* ================================================================
+	 * SHAPE
+	 * ================================================================ */
+
+	--bare-radius-none: 0;
+	--bare-radius-xs: 0.25rem;
+	--bare-radius-sm: 0.5rem;
+	--bare-radius-md: 0.75rem;
+	--bare-radius-lg: 1rem;
+	--bare-radius-xl: 1.75rem;
+	--bare-radius-full: 9999px;
+
+
+	/* ================================================================
+	 * BORDER
+	 * ================================================================ */
+
+	--bare-border-width: 1px;
+	--bare-border-width-focus: 2px;
+
+	--bare-border-color: var(--bare-color-outline);
+	--bare-border-color-muted: var(--bare-color-outline-variant);
+
+
+	/* ================================================================
+	 * ELEVATION
+	 * ================================================================ */
+
+	--bare-shadow-none: none;
+
+	--bare-shadow-1:
+		0 1px 2px rgba(0, 0, 0, 0.3),
+		0 1px 3px 1px rgba(0, 0, 0, 0.15);
+
+	--bare-shadow-2:
+		0 1px 2px rgba(0, 0, 0, 0.3),
+		0 2px 6px 2px rgba(0, 0, 0, 0.15);
+
+	--bare-shadow-3:
+		0 1px 3px rgba(0, 0, 0, 0.3),
+		0 4px 8px 3px rgba(0, 0, 0, 0.15);
+
+
+	/* ================================================================
+	 * MOTION
+	 * ================================================================ */
+
+	--bare-duration-short: 100ms;
+	--bare-duration-medium: 200ms;
+	--bare-duration-long: 300ms;
+
+	--bare-easing-standard:
+		cubic-bezier(0.2, 0, 0, 1);
+
+	--bare-easing-emphasized:
+		cubic-bezier(0.2, 0, 0, 1);
+
+
+	/* ================================================================
+	 * STATE
+	 * ================================================================ */
+
+	--bare-state-hover-opacity: 0.08;
+	--bare-state-focus-opacity: 0.12;
+	--bare-state-pressed-opacity: 0.12;
+	--bare-state-disabled-opacity: 0.38;
+
+
+	/* ================================================================
+	 * FOCUS
+	 * ================================================================ */
+
+	--bare-focus-width: 2px;
+	--bare-focus-offset: 2px;
+	--bare-focus-color: var(--bare-color-focus);
+
+	--bare-focus-ring:
+		0 0 0 3px
+		color-mix(
+			in srgb,
+			var(--bare-color-focus) 20%,
+			transparent
+		);
+
+
+	/* ================================================================
+	 * FORM FIELDS
+	 * ================================================================ */
+
+	--bare-field-gap: var(--bare-space-1);
+	--bare-field-margin-bottom: var(--bare-space-4);
+
+	--bare-field-label-color:
+		var(--bare-color-on-surface);
+
+	--bare-field-label-font-size:
+		var(--bare-font-size-md);
+
+	--bare-field-label-font-weight:
+		var(--bare-font-weight-medium);
+
+	--bare-input-height: 3.5rem;
+
+	--bare-input-padding-block:
+		var(--bare-space-3);
+
+	--bare-input-padding-inline:
+		var(--bare-space-4);
+
+	--bare-input-font-size:
+		var(--bare-font-size-lg);
+
+	--bare-input-color:
+		var(--bare-color-on-surface);
+
+	--bare-input-placeholder-color:
+		var(--bare-color-on-surface-variant);
+
+	--bare-input-background:
+		var(--bare-color-surface);
+
+	--bare-input-border-color:
+		var(--bare-color-outline);
+
+	--bare-input-border-color-focus:
+		var(--bare-color-primary);
+
+	--bare-input-border-color-error:
+		var(--bare-color-error);
+
+	--bare-input-border-width:
+		var(--bare-border-width);
+
+	--bare-input-border-radius:
+		var(--bare-radius-xs);
+
+	--bare-input-disabled-color:
+		var(--bare-color-disabled);
+
+	--bare-input-disabled-background:
+		var(--bare-color-disabled-surface);
+
+
+	/* ================================================================
+	 * BUTTONS
+	 * ================================================================ */
+
+	--bare-button-height: 2.5rem;
+
+	--bare-button-padding-inline:
+		var(--bare-space-6);
+
+	--bare-button-gap:
+		var(--bare-space-2);
+
+	--bare-button-font-size:
+		var(--bare-font-size-md);
+
+	--bare-button-font-weight:
+		var(--bare-font-weight-medium);
+
+	--bare-button-border-radius:
+		var(--bare-radius-full);
+
+	--bare-button-disabled-background:
+		var(--bare-color-disabled-surface);
+
+	--bare-button-disabled-color:
+		var(--bare-color-disabled);
+
+	/* Primary button */
+
+	--bare-button-background:
+		var(--bare-color-primary);
+
+	--bare-button-color:
+		var(--bare-color-on-primary);
+
+	--bare-button-border-color:
+		var(--bare-color-primary);
+
+	--bare-button-hover-background:
+		var(--bare-color-primary);
+
+	--bare-button-hover-shadow:
+		var(--bare-shadow-1);
+
+	/* Outline button */
+
+	--bare-button-outline-background:
+		transparent;
+
+	--bare-button-outline-color:
+		var(--bare-color-primary);
+
+	--bare-button-outline-border-color:
+		var(--bare-color-outline);
+
+	--bare-button-outline-hover-background:
+		var(--bare-color-primary-container);
+
+	/* Disabled button */
+
+	--bare-button-disabled-background:
+		var(--bare-color-disabled-surface);
+
+	--bare-button-disabled-color:
+		var(--bare-color-disabled);
+
+
+	/* ================================================================
+	 * ICONS
+	 * ================================================================ */
+
+	--bare-icon-size-sm: 1rem;
+	--bare-icon-size-md: 1.25rem;
+	--bare-icon-size-lg: 1.5rem;
+
+	--bare-icon-color:
+		var(--bare-color-on-surface-variant);
+
+	--bare-icon-color-active:
+		var(--bare-color-on-surface);
+}
